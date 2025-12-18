@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import HeroSlider from "../components/HeroSlider";
-import Listings from "../components/listing";
-import Navbar from "../components/navbar";
+import Listings from "../components/Listing";
+import Navbar from "../components/Navbar";
 import Testimonials from "../components/Testimonials";
 import CoreValues from "../components/Values";
 
