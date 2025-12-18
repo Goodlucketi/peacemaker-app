@@ -7,6 +7,7 @@ import hero1 from "../assets/images/hero-bg1.webp";
 import hero2 from "../assets/images/hero-bg2.webp";
 import hero3 from "../assets/images/hero-bg3.webp";
 import hero4 from "../assets/images/hero-bg4.webp";
+import { useRef, useState } from "react";
 
 /* ---------------- SLIDES DATA ---------------- */
 const heroSlides = [
