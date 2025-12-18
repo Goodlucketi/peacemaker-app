@@ -62,7 +62,7 @@ const Listings = () => {
   };
 
   return (
-    <main className="pt-20 py-10 mt-0 mb-10 bg-slate-100">
+    <main className="py-20 mt-0 mb-0 bg-slate-100">
         <div className="relative group w-11/12 mx-auto ">
             <h2 className="text-2xl font-bold text-center text-blue-400 p-2 my-5">Available Hotels</h2>
             {/* Custom Arrows */}
