@@ -64,7 +64,7 @@ const Listings = () => {
   return (
     <main className="py-20 mt-0 mb-0 bg-slate-100">
         <div className="relative group w-11/12 mx-auto ">
-            <h2 className="text-2xl font-bold text-center text-blue-400 p-2 my-5">Available Hotels</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-center text-blue-700 p-2 my-5">Available Hotels</h2>
             {/* Custom Arrows */}
             <button
                 onClick={() => scrollBy("prev")}
