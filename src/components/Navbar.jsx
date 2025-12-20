@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/images/logos/logo-colour.png";
+import Logo from "../assets/images/logos/logo-black.png";
+import Logo_Mobile from "../assets/images/logos/logo-colour.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,7 +72,7 @@ const Navbar = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between p-6">
-          <img src={Logo} alt="Logo" className="w-12 brightness-200" />
+          <img src={Logo_Mobile} alt="Logo" className="w-12 brightness-200" />
           <button onClick={() => setMenuOpen(false)} className="text-white">
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

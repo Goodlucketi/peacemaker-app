@@ -3,20 +3,20 @@ import contactImage from "../assets/images/hero-bg1.webp"; // Replace with your 
 const ContactForm = () => {
   return (
     <section className="bg-gray-50 py-16">
-      <div className="w-11/12 mx-auto px-6 md:px-10 my-10 grid grid-cols-1 md:grid-cols-2 gap-12 h-screen items-center">
+      <div className="w-11/12 mx-auto md:px-6 md:px-10 md:my-10 grid grid-cols-1 md:grid-cols-2 md:gap-12 h-screen items-center">
         
         {/* Image Section */}
         <div className="w-full">
           <img
             src={contactImage}
             alt="Contact us"
-            className="w-full h-screen object-cover rounded-lg shadow-lg"
+            className="w-full md:h-screen object-cover rounded-lg shadow-lg"
           />
         </div>
 
         {/* Form Section */}
         <div className="w-full bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl font-bold text-blue-700 mb-3">
             Get in Touch
           </h2>
           <p className="text-gray-600 mb-4">
