@@ -10,7 +10,7 @@ const Footer = () => {
             
             {/* Brand / Logo */}
             <div>
-                <img src={Logo} alt="Peace Maker Brand Logo" className="w-3/12 mb-3 p-2"/>
+                <img src={Logo} alt="Peace Maker Brand Logo" className="w-2/12 md:w-3/12 mb-3 p-2"/>
                 <p className="text-gray-400">
                     Building comfort, style, and modern living experiences for everyone.
                 </p>
@@ -18,7 +18,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <h3 className="text-lg font-bold mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                     <li>
                     <Link to="/" className="hover:text-white transition">
@@ -45,7 +45,7 @@ const Footer = () => {
 
             {/* Services / Resources */}
             <div>
-                <h3 className="text-lg font-semibold mb-4">Services</h3>
+                <h3 className="text-lg font-bold mb-4">Services</h3>
                 <ul className="space-y-2">
                     <li>
                     <Link to="/listings" className="hover:text-white transition">
@@ -67,7 +67,7 @@ const Footer = () => {
 
             {/* Social / Contact */}
             <div>
-                <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+                <h3 className="text-lg font-bold mb-4">Follow Us</h3>
                 <div className="flex space-x-4 mb-4">
                     <a href="#" className="hover:text-white transition">
                     <FaFacebookF />
@@ -83,7 +83,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <p className="text-gray-400 text-sm">
-                    © {new Date().getFullYear()} YourBrand. All rights reserved.
+                    © {new Date().getFullYear()} Pacemaker Bookings. All rights reserved.
                 </p>
             </div>
         </div>
