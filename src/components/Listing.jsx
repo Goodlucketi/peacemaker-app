@@ -27,121 +27,121 @@ import colonnades from "../assets/images/colonnades.jpg";
 
 /* ---------------- SLIDES DATA ---------------- */
 const slides = [
-  {
+ {
     image: bristolPalaceKano,
-    alt: "Bristol Palace Kano luxury hotel in Kano Nigeria featuring elegant rooms, modern interiors, and premium hospitality",
+    alt: "Bristol Palace Kano luxury hotel in Kano, Nigeria featuring elegant rooms, modern interiors, and premium amenities",
     title: "Bristol Palace Kano",
     text: "Comfort and elegance redefined",
-  },
-  {
-    image: bonHotelKano,
-    alt: "Bon Hotel Kano modern business hotel in Kano Nigeria offering comfortable rooms and quality amenities",
-    title: "Bon Hotel Kano",
-    text: "Smart comfort for modern stays",
-  },
-  {
-    image: theColossusLagos,
-    alt: "The Colossus Lagos contemporary luxury hotel in Lagos Nigeria with bold architecture and refined interiors",
-    title: "The Colossus Lagos",
-    text: "Bold design, refined comfort",
-  },
-  {
-    image: leola,
-    alt: "L’EOLA boutique hotel in Lagos Nigeria offering serene ambiance, modern luxury, and stylish accommodations",
-    title: "L’EOLA",
-    text: "Quiet luxury, thoughtfully designed",
-  },
-  {
-    image: avenuesSuites,
-    alt: "Avenues Suites Lagos modern hotel and suites in Lagos Nigeria with comfortable rooms and city convenience",
-    title: "Avenues Suites",
-    text: "Relaxed comfort, city convenience",
-  },
-  {
-    image: clearEssenceCalifornia,
-    alt: "Clear Essence California wellness boutique hotel in Lagos Nigeria featuring spa-inspired interiors and tranquil ambiance",
-    title: "Clear Essence California",
-    text: "Wellness-inspired boutique luxury",
-  },
-
-   {
-    image: delborough,
-    alt: "Luxury boutique hotel interior at Delborough Lagos with elegant furnishings and modern design",
-    title: "Delborough Lagos",
-    text: "Refined luxury, timeless elegance",
-  },
-  {
-    image: artHotel,
-    alt: "Modern luxury hotel interior at The Art Hotel featuring artistic decor and contemporary design",
-    title: "The Art Hotel",
-    text: "Where comfort meets creativity",
-  },
-  {
-    image: maisonFahrenheit,
-    alt: "Stylish boutique hotel at Maison Fahrenheit Lagos with rooftop views and modern interiors",
-    title: "Maison Fahrenheit",
-    text: "Bold style, relaxed luxury",
-  },
-  {
-    image: blackDiamond,
-    alt: "Premium city hotel at Black Diamond Lagos with elegant rooms and luxury amenities",
-    title: "Black Diamond Hotel",
-    text: "Sophistication in every stay",
-  },
-  {
-    image: marokoBayshore,
-    alt: "Waterfront hotel at Maroko Bayshore Lagos overlooking the lagoon with serene surroundings",
-    title: "Maroko Bayshore",
-    text: "Waterfront calm, city comfort",
-  },
-  {
-    image: laPalmRoyal,
-    alt: "Luxury beachfront resort at La Palm Royal Beach Hotel Ghana with ocean views and palm-lined grounds",
-    title: "La Palm Royal Beach Hotel, Ghana",
-    text: "Beachfront luxury redefined",
-  },
-  {
-    image: lagosContinental,
-    alt: "High-rise luxury hotel Lagos Continental offering panoramic city views and five-star accommodation",
-    title: "Lagos Continental Hotel",
-    text: "Luxury above the city",
-  },
-  {
-    image: theGeorge,
-    alt: "Exclusive luxury boutique hotel at The George Lagos with refined interiors and serene ambiance",
-    title: "The George Lagos",
-    text: "Private, elegant, exclusive",
-  },
-  {
-    image: federalPalace,
-    alt: "Luxury beachfront hotel and casino at Federal Palace Lagos with elegant architecture and ocean views",
-    title: "Federal Palace Hotel & Casino",
-    text: "Classic luxury by the sea",
-  },
-  {
-    image: legendsAirport,
-    alt: "Five-star airport hotel at Legends Hotel Lagos Airport offering premium comfort and convenience",
-    title: "Legends Hotel Lagos Airport",
-    text: "Luxury at your arrival point",
-  },
-  {
-    image: pearlwort,
-    alt: "Modern hotel and suites at Pearlwort Lagos with stylish interiors and premium amenities",
-    title: "Pearlwort Hotel & Suites",
-    text: "Modern comfort, elevated living",
-  },
-  {
-  image: rollaceViews,
-  alt: "Modern city hotel at Rollace Hotel Lagos with stylish rooms and contemporary amenities",
-  title: "Rollace Hotel",
-  text: "Stylish comfort with vibrant city energy",
 },
 {
-  image: colonnades,
-  alt: "Elegant boutique hotel at Colonnades Hotel Lagos offering calm surroundings and refined interiors",
-  title: "Colonnades Hotel",
-  text: "Calm elegance in a prime location",
+    image: bonHotelKano,
+    alt: "Bon Hotel Kano modern business hotel in Kano, Nigeria with comfortable rooms, meeting facilities, and quality services",
+    title: "Bon Hotel Kano",
+    text: "Smart comfort for modern stays",
 },
+{
+    image: theColossusLagos,
+    alt: "The Colossus Lagos contemporary luxury hotel in Lagos, Nigeria featuring bold architecture, refined interiors, and high-end amenities",
+    title: "The Colossus Lagos",
+    text: "Bold design, refined comfort",
+},
+{
+    image: leola,
+    alt: "L’EOLA boutique hotel in Lagos, Nigeria offering serene ambiance, modern luxury, stylish accommodations, and premium hospitality",
+    title: "L’EOLA",
+    text: "Quiet luxury, thoughtfully designed",
+},
+{
+    image: avenuesSuites,
+    alt: "Avenues Suites Lagos modern hotel and suites in Lagos, Nigeria with comfortable rooms, city convenience, and quality amenities",
+    title: "Avenues Suites",
+    text: "Relaxed comfort, city convenience",
+},
+{
+    image: clearEssenceCalifornia,
+    alt: "Clear Essence California wellness boutique hotel in Lagos, Nigeria featuring spa-inspired interiors, tranquil ambiance, and luxurious suites",
+    title: "Clear Essence California",
+    text: "Wellness-inspired boutique luxury",
+},
+{
+    image: delborough,
+    alt: "Delborough Lagos luxury boutique hotel in Lagos, Nigeria with elegant rooms, modern interiors, and premium services",
+    title: "Delborough Lagos",
+    text: "Refined luxury, timeless elegance",
+},
+{
+    image: artHotel,
+    alt: "The Art Hotel Lagos contemporary luxury hotel in Lagos, Nigeria featuring artistic decor, modern interiors, and stylish rooms",
+    title: "The Art Hotel",
+    text: "Where comfort meets creativity",
+},
+{
+    image: maisonFahrenheit,
+    alt: "Maison Fahrenheit Lagos boutique hotel in Lagos, Nigeria with rooftop views, stylish interiors, and premium amenities",
+    title: "Maison Fahrenheit",
+    text: "Bold style, relaxed luxury",
+},
+{
+    image: blackDiamond,
+    alt: "Black Diamond Hotel Lagos luxury city hotel in Lagos, Nigeria featuring elegant rooms, modern facilities, and refined hospitality",
+    title: "Black Diamond Hotel",
+    text: "Sophistication in every stay",
+},
+{
+    image: marokoBayshore,
+    alt: "Maroko Bayshore Lagos waterfront hotel in Lagos, Nigeria overlooking the lagoon with serene surroundings, elegant rooms, and modern amenities",
+    title: "Maroko Bayshore",
+    text: "Waterfront calm, city comfort",
+},
+{
+    image: laPalmRoyal,
+    alt: "La Palm Royal Beach Hotel Ghana luxury beachfront resort in Accra, Ghana featuring ocean views, palm-lined grounds, and premium services",
+    title: "La Palm Royal Beach Hotel, Ghana",
+    text: "Beachfront luxury redefined",
+},
+{
+    image: lagosContinental,
+    alt: "Lagos Continental Hotel high-rise luxury hotel in Lagos, Nigeria offering panoramic city views, elegant rooms, and five-star amenities",
+    title: "Lagos Continental Hotel",
+    text: "Luxury above the city",
+},
+{
+    image: theGeorge,
+    alt: "The George Lagos exclusive luxury boutique hotel in Lagos, Nigeria featuring refined interiors, serene ambiance, and premium hospitality",
+    title: "The George Lagos",
+    text: "Private, elegant, exclusive",
+},
+{
+    image: federalPalace,
+    alt: "Federal Palace Hotel & Casino Lagos luxury beachfront hotel in Lagos, Nigeria offering elegant architecture, ocean views, and premium facilities",
+    title: "Federal Palace Hotel & Casino",
+    text: "Classic luxury by the sea",
+},
+{
+    image: legendsAirport,
+    alt: "Legends Hotel Lagos Airport five-star airport hotel in Lagos, Nigeria featuring premium rooms, modern amenities, and convenient access",
+    title: "Legends Hotel Lagos Airport",
+    text: "Luxury at your arrival point",
+},
+{
+    image: pearlwort,
+    alt: "Pearlwort Hotel & Suites Lagos modern hotel and suites in Lagos, Nigeria with stylish rooms, premium amenities, and comfortable accommodations",
+    title: "Pearlwort Hotel & Suites",
+    text: "Modern comfort, elevated living",
+},
+{
+    image: rollaceViews,
+    alt: "Rollace Hotel Lagos modern city hotel in Lagos, Nigeria featuring stylish rooms, contemporary amenities, and vibrant hospitality",
+    title: "Rollace Hotel",
+    text: "Stylish comfort with vibrant city energy",
+},
+{
+    image: colonnades,
+    alt: "Colonnades Hotel Lagos elegant boutique hotel in Lagos, Nigeria offering calm surroundings, refined interiors, and premium hospitality",
+    title: "Colonnades Hotel",
+    text: "Calm elegance in a prime location",
+},
+
 
   
 ];
