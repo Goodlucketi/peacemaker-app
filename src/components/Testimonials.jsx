@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
+import { FaUser } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -48,7 +49,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="w-11/12 mx-auto px-6 md:px-10">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-12">
           What Our Clients Say
         </h2>
@@ -64,28 +65,26 @@ const Testimonials = () => {
           }}
           pagination={{ clickable: true }}
           breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
           }}
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="bg-white p-6 rounded-full shadow-lg flex flex-col items-center justify-center h-64 w-64 relative">
+              <div className="bg-white p-4 rounded-full shadow-md flex flex-col items-center justify-center md:w-60 md:h-60 relative">
                 
-                {/* Placeholder for image/avatar */}
-                <div className="bg-gray-200 rounded-full h-20 w-20 flex items-center justify-center mb-4 text-gray-500 text-xl">
-                  {/* You can replace with <img src={avatar} /> later */}
-                  IMG
+                <div className="bg-gray-200 rounded-full p-4 flex items-center justify-center text-gray-500">
+                  <FaUser size={25} color="blue"/>
                 </div>
 
                 {/* Testimonial text */}
-                <p className="text-center text-gray-700 mb-4 px-4">
+                <p className="text-center text-sm text-gray-700 p-2">
                   "{testimonial.text}"
                 </p>
 
                 {/* Name & role */}
-                <div className="text-center">
+                <div className="text-center p-2">
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <p className="text-gray-500 text-sm">{testimonial.role}</p>
                 </div>
