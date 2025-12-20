@@ -196,7 +196,7 @@ const Listings = () => {
                 allowTouchMove
                 className="ticker-swiper"
                 breakpoints={{
-                    320: { slidesPerView: 3 },
+                    320: { slidesPerView: 2 },
                     640: { slidesPerView: 3 },
                     1024: { slidesPerView: 4 },
                 }}
