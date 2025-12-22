@@ -87,8 +87,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="w-11/12 mx-auto md:px-10 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 h-screen items-center">
+    <section className="bg-gray-50 py-4 md:py-16">
+      <div className="w-11/12 mx-auto md:px-10 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-12 md:h-screen items-center">
 
         {/* Image */}
         <div>
@@ -102,12 +102,12 @@ const ContactForm = () => {
         </div>
 
         {/* Form */}
-        <div className={`bg-white p-8 md:py-14 md:px-12 rounded-lg shadow-lg ${shake ? "animate-shake" : ""}`}>
+        <div className={`bg-white p-6 md:py-14 md:px-12 rounded-lg shadow-lg ${shake ? "animate-shake" : ""}`}>
           <h2 className="text-3xl font-bold text-blue-700 mb-5">
             Get in Touch
           </h2>
 
-          <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+          <form ref={formRef} onSubmit={sendEmail} className="md:space-y-4">
 
             {/* Honeypot */}
             <input type="text" name="company" className="hidden" tabIndex="-1" />
@@ -120,7 +120,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className={`w-full border rounded-md px-4 py-3 mb-3 ${
+                className={`w-full border rounded-md md:px-4 p-2 py-3 mb-3 ${
                   errors.name ? "border-red-500" : ""
                 }`}
               />
@@ -137,7 +137,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your email"
-                  className={`w-full border rounded-md px-4 py-3 mb-3 ${
+                  className={`w-full border rounded-md md:px-4 p-2 py-3 mb-3 ${
                     errors.email ? "border-red-500" : ""
                   }`}
               />
@@ -154,7 +154,7 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Your phone"
-                className="w-full border rounded-md px-4 py-3 mb-3"
+                className="w-full border rounded-md md:px-4 p-2 py-3 mb-3"
               />
           
             </div>
@@ -166,7 +166,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your message"
-                className={`w-full border rounded-md px-4 py-3 mb-3 resize-none ${
+                className={`w-full border rounded-md md:px-4 p-2 py-3 mb-3 resize-none ${
                   errors.message ? "border-red-500" : ""
                 }`}
               />
