@@ -218,6 +218,8 @@ const Listings = () => {
                     <img
                         src={slide.image}
                         alt={slide.alt}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-62 object-cover rounded-md"
                     />
                   </div>

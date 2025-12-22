@@ -45,12 +45,12 @@ const Navbar = () => {
           ))}
 
           {/* CTA */}
-          <NavLink
-            to="/contact"
+          <a
+            href="https://neo.cultbooking.com/CPC/?agentcode=58078&hotelcode=128602&lang=en&propertygroup=true"
             className="bg-blue-700 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition"
           >
             Book Now
-          </NavLink>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -100,13 +100,13 @@ const Navbar = () => {
           ))}
 
           {/* CTA */}
-          <NavLink
-            to="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="mt-6 bg-blue-600 text-white px-8 py-3 rounded-md text-lg hover:bg-blue-700 transition"
+          <a
+            href="https://neo.cultbooking.com/CPC/?agentcode=58078&hotelcode=128602&lang=en&propertygroup=true"
+            className="bg-blue-700 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition"
           >
             Book Now
-          </NavLink>
+          </a>
+
         </div>
       </div>
     </nav>
