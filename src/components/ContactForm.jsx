@@ -88,7 +88,7 @@ const ContactForm = () => {
 
   return (
     <section className="bg-gray-50 py-16">
-      <div className="w-11/12 mx-auto md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 h-screen items-center">
+      <div className="w-11/12 mx-auto md:px-10 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 h-screen items-center">
 
         {/* Image */}
         <div>
@@ -102,7 +102,7 @@ const ContactForm = () => {
         </div>
 
         {/* Form */}
-        <div className={`bg-white md:py-14 md:px-12 rounded-lg shadow-lg ${shake ? "animate-shake" : ""}`}>
+        <div className={`bg-white p-8 md:py-14 md:px-12 rounded-lg shadow-lg ${shake ? "animate-shake" : ""}`}>
           <h2 className="text-3xl font-bold text-blue-700 mb-5">
             Get in Touch
           </h2>
