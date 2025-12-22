@@ -1,92 +1,194 @@
-import contactImage from "../assets/images/hero-bg1.webp"; // Replace with your image path
+import { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import contactImage from "../assets/images/hero-bg1.webp";
 
 const ContactForm = () => {
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const [shake, setShake] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const isFormValid =
+    formData.name.trim() &&
+    formData.email.trim() &&
+    formData.message.trim();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    if (!validate()) {
+      setShake(true);
+      setTimeout(() => setShake(false), 400);
+      return;
+    }
+
+    setLoading(true);
+    const loadingToast = toast.loading("Sending message...");
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.update(loadingToast, {
+        render: "Message sent successfully! We’ll be in touch.",
+        type: "success",
+        isLoading: false,
+        autoClose: 4000,
+      });
+
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setErrors({});
+      formRef.current.reset();
+    } catch {
+      toast.update(loadingToast, {
+        render: "Failed to send message. Please try again.",
+        type: "error",
+        isLoading: false,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="bg-gray-50 py-16">
-      <div className="w-11/12 mx-auto md:px-6 md:px-10 md:my-10 grid grid-cols-1 md:grid-cols-2 md:gap-12 h-screen items-center">
-        
-        {/* Image Section */}
-        <div className="w-full">
+      <div className="w-11/12 mx-auto md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 h-screen items-center">
+
+        {/* Image */}
+        <div>
           <img
             src={contactImage}
-            alt="Contact us"
-            className="w-full md:h-screen object-cover rounded-lg shadow-lg"
+            alt="Contact Peacemaker Hotels booking and customer support"
+            loading="lazy"
+            decoding="async"
+            className="w-full object-cover rounded-lg md:h-screen shadow-lg"
           />
         </div>
 
-        {/* Form Section */}
-        <div className="w-full bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-blue-700 mb-3">
+        {/* Form */}
+        <div className={`bg-white md:py-14 md:px-12 rounded-lg shadow-lg ${shake ? "animate-shake" : ""}`}>
+          <h2 className="text-3xl font-bold text-blue-700 mb-5">
             Get in Touch
           </h2>
-          <p className="text-gray-600 mb-4">
-            Fill out the form below and we will get back to you as soon as possible.
-          </p>
 
-          <form className="space-y-4">
+          <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+
+            {/* Honeypot */}
+            <input type="text" name="company" className="hidden" tabIndex="-1" />
+
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-gray-700 font-medium mb-1">
-                Name
-              </label>
               <input
                 type="text"
-                id="name"
                 name="name"
-                placeholder="Your full name"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your name"
+                className={`w-full border rounded-md px-4 py-3 mb-3 ${
+                  errors.name ? "border-red-500" : ""
+                }`}
               />
+              {errors.name && (
+                <p className="text-sm text-red-500 mt-1">{errors.name}</p>
+              )}
             </div>
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-1">
-                Email
-              </label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your email"
+                  className={`w-full border rounded-md px-4 py-3 mb-3 ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
               />
+              {errors.email && (
+                <p className="text-sm text-red-500 mt-1">{errors.email}</p>
+              )}
             </div>
 
             {/* Phone */}
             <div>
-              <label htmlFor="phone" className="block text-gray-700 font-medium mb-1">
-                Phone
-              </label>
               <input
                 type="tel"
-                id="phone"
                 name="phone"
-                placeholder="+234 123 456 7890"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Your phone"
+                className="w-full border rounded-md px-4 py-3 mb-3"
               />
+          
             </div>
-
             {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-gray-700 font-medium mb-1">
-                Message
-              </label>
               <textarea
-                id="message"
                 name="message"
                 rows="5"
-                placeholder="Write your message here..."
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none"
-              ></textarea>
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message"
+                className={`w-full border rounded-md px-4 py-3 mb-3 resize-none ${
+                  errors.message ? "border-red-500" : ""
+                }`}
+              />
+              {errors.message && (
+                <p className="text-sm text-red-500 mt-1">{errors.message}</p>
+              )}
             </div>
 
-            {/* Submit Button */}
+            {/* Button */}
             <button
               type="submit"
-              className="mt-3 w-full bg-blue-600 text-white font-semibold py-3 rounded-md hover:bg-blue-700 transition"
+              disabled={!isFormValid || loading}
+              className={`w-full py-3 rounded-md text-white font-semibold transition-all duration-300
+                ${
+                  !isFormValid || loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] active:scale-95"
+                }`}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
+
           </form>
         </div>
       </div>
