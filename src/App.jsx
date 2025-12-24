@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import FAQPage from "./pages/FAQPage";
 function App() {
   return (
     <>
@@ -24,6 +25,12 @@ function App() {
           path="/contact" 
           element = { 
               <Contact /> 
+            }
+        />
+        <Route 
+          path="/faqs" 
+          element = { 
+              <FAQPage /> 
             }
         />
 

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import faqData from "./faqData";
+import { FaArrowDown } from "react-icons/fa6";
+import { FaChevronCircleDown } from "react-icons/fa";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -9,8 +11,11 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="bg-gray-50 py-10">
+      <div>
+
+      </div>
+      <div className="w-11/12 mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">
           Frequently Asked Questions
         </h2>
@@ -32,13 +37,13 @@ const FAQ = () => {
                     activeIndex === index ? "rotate-180" : ""
                   }`}
                 >
-                  ⌄
+                  <FaChevronCircleDown />
                 </span>
               </button>
 
               <div
                 className={`px-6 overflow-hidden transition-all duration-300 ${
-                  activeIndex === index ? "max-h-40 py-2" : "max-h-0"
+                  activeIndex === index ? "max-h-50 py-2" : "max-h-0"
                 }`}
               >
                 <p className="text-gray-600">{faq.answer}</p>
