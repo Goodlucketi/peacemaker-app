@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import FAQ from "../components/FAQ";
 import FAQSchema from "../components/FAQSchema";
+import Footer from "../components/Footer";
 
 const FAQPage = () => {
   return (
-    <>
+    <main className="faqs">
       <Helmet>
         <title>FAQs | Pacemaker Concierge Hotel Booking</title>
         <meta
@@ -15,7 +16,8 @@ const FAQPage = () => {
 
       <FAQSchema />
       <FAQ />
-    </>
+      <Footer />
+    </main>
   );
 };
 
