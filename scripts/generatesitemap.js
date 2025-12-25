@@ -5,10 +5,11 @@ const pages = [
   "/",
   "/about",
   "/contact",
+  "/faqs",
 ]
 
 const sitemap = new SitemapStream({
-  hostname: "https://yourdomain.com",
+  hostname: "https://pacemakerconciergeservice.com/",
 })
 
 pages.forEach(url => sitemap.write({ url }))
