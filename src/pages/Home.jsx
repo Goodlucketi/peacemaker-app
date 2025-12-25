@@ -13,13 +13,13 @@ const Home = () => {
             <title>Pacemaker Concierge | Luxury Hotel Booking & Concierge Services</title>
 
             <meta
-            name="description"
-            content="Book luxury hotels, boutique stays, and premium accommodations in Lagos, Kano, Ghana, and beyond with Pacemaker Concierge Service."
+              name="description"
+              content="Book luxury hotels, boutique stays, and premium accommodations in Lagos, Kano, Ghana, and beyond with Pacemaker Concierge Service."
             />
 
             <meta
-            name="keywords"
-            content="hotel booking Nigeria, luxury hotels Lagos, concierge services, boutique hotels Africa"
+              name="keywords"
+              content="hotel booking, luxury hotels Nigeria, boutique hotels Lagos, hotel reservations Ghana, online hotel booking, hotels in uyo,  Peacemaker hotels, hotels near me"
             />
 
             <link rel="canonical" href="https://pacemakerconciergeservice.com/" />
